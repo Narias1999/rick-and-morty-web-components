@@ -1,10 +1,10 @@
 const path = require("path");
-const HTMLWebpackPlugin = require('html-webpack-plugin');
+const HTMLWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, "src/index.ts"),
   devtool: "inline-source-map",
-  mode: 'development',
+  mode: "development",
   module: {
     rules: [
       {
@@ -14,8 +14,12 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['to-string-loader', 'css-loader'],
-      }
+        use: ["style-loader", "css-loader"],
+      },
+      {
+         test: /\.scss$/,
+         use: ["to-string-loader", "css-loader", 'sass-loader'],
+      },
     ],
   },
   resolve: {
@@ -23,13 +27,13 @@ module.exports = {
   },
   plugins: [
     new HTMLWebpackPlugin({
-      title: 'Rick and morty | web components',
-      template: 'index.html'
-    })
+      title: "Rick and morty | web components",
+      template: "index.html",
+    }),
   ],
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: './',
+    publicPath: "./",
   },
 };

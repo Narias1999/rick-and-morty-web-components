@@ -1,10 +1,9 @@
 import { ICharacter } from './../../models/Character';
 
-const styles = require('./CharacterList.css').toString();
+const styles = require('./CharacterList.scss').toString();
 
 function characterTemplate(character: ICharacter): String {
   return`
-    <style>${styles}</style>
     <character-card name=${character.name} img=${character.image}>
         <p slot="species">${character.species}</p>
         <p slot="type">${character.type}</p>
@@ -23,6 +22,11 @@ export class CharacterList extends HTMLElement {
   }
 
   _render(characters: ICharacter[]) {
-    this.shadowRoot.innerHTML = characters.map(characterTemplate).join('');
+    this.shadowRoot.innerHTML = `
+    <style>${styles}</style>
+    <div>
+      ${characters.map(characterTemplate).join('')}
+    </div>
+    `;
   }
 }

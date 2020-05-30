@@ -1,11 +1,11 @@
-const styles = require('./CharacterCard.css').toString();
+const styles = require('./CharacterCard.scss').toString();
 
 const template = document.createElement('template');
 template.innerHTML = `
     <style>${styles}</style>
-    <div class="character-card">
-        <img />
-        <div>
+    <div class="characterCard">
+        <img class="characterCard__image" />
+        <div class="characterCard__info">
             <h3>Hola mundo</h3>
             <p> <slot name="species"></slot> </p>
             <p> <slot name="type"></slot> </p>
