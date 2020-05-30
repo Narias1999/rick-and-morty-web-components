@@ -5,15 +5,15 @@ const styles = require('./CharacterList.css').toString();
 function characterTemplate(character: ICharacter): String {
   return`
     <style>${styles}</style>
-    <character name=${character.name} img=${character.image}>
+    <character-card name=${character.name} img=${character.image}>
         <p slot="species">${character.species}</p>
         <p slot="type">${character.type}</p>
-    </character>
+    </character-card>
   `
 }
 
 export class CharacterList extends HTMLElement {
-  set results(characters: ICharacter[]) {
+  set characters(characters: ICharacter[]) {
     this._render(characters);
   }
 
