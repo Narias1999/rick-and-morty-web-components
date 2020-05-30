@@ -1,4 +1,12 @@
-import test from './components/test/Test';
+import { Character } from './components/CharacterCard/CharacterCard';
+import { CharacterList } from './components/CharacterList/CharacterList';
+import { Api } from './api/';
 
-let x = 123;
-console.log(test);
+console.log('Hola :)')
+
+customElements.define('character-card', Character);
+customElements.define('character-list', CharacterList);
+
+const api = new Api();
+
+api.listCharacters().then(console.log);

@@ -1,4 +1,4 @@
-const styles = require('./Character.css').toString();
+const styles = require('./CharacterCard.css').toString();
 
 const template = document.createElement('template');
 template.innerHTML = `

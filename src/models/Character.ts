@@ -1,6 +1,9 @@
 export interface ICharacter {
+  id: number,
+  gender: string,
   name: string,
-  img: string,
+  image: string,
   type: string,
-  species: string
+  species: string,
+  status: string
 }

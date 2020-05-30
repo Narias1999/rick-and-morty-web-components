@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "prestart": "live-server ./dist &",
+    "start": "webpack --watch"
   },
   "author": "",
   "license": "ISC",
@@ -13,11 +14,11 @@
     "css-loader": "^3.5.3",
     "html-webpack-plugin": "^4.3.0",
     "lit-html": "^1.2.1",
+    "live-server": "^1.2.1",
     "source-map": "0.7.2",
     "to-string-loader": "^1.1.6",
     "typescript": "^3.9.3",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-cli": "^3.3.11"
   }
 }
