@@ -1,7 +1,7 @@
 import { Character } from './components/CharacterCard/CharacterCard';
 import { CharacterList } from './components/CharacterList/CharacterList';
 import { Api } from './api/';
-import './css/main.css';
+import './main.css';
 
 customElements.define('character-card', Character);
 customElements.define('character-list', CharacterList);

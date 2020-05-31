@@ -6,9 +6,10 @@ template.innerHTML = `
     <div class="characterCard">
         <img class="characterCard__image" />
         <div class="characterCard__info">
-            <h3>Hola mundo</h3>
-            <p> <slot name="species"></slot> </p>
-            <p> <slot name="type"></slot> </p>
+            <h3>Character name</h3>
+            <div class="characterCard__hiddenInfo">
+              <p> <slot name="species"></slot> </p>
+            </div>
         </div>
     </div>
 `;

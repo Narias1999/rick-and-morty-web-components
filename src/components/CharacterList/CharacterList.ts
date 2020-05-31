@@ -5,8 +5,7 @@ const styles = require('./CharacterList.scss').toString();
 function characterTemplate(character: ICharacter): String {
   return`
     <character-card name=${character.name} img=${character.image}>
-        <p slot="species">${character.species}</p>
-        <p slot="type">${character.type}</p>
+        <span slot="species">${character.species}</span>
     </character-card>
   `
 }

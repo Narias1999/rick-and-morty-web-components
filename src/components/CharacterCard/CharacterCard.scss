@@ -1,21 +1,42 @@
+@import './../../scss/variables';
+
+$info-radious: $border-radious - 5px;
+
 .characterCard {
   position: relative;
-  border-radius: 15px;
+  height: $card-height;
+  border-radius: $border-radious;
   overflow: hidden;
-  height: 350px;
-}
-.characterCard__image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.characterCard__info {
-  position: absolute;
-  bottom: 0;
-  width: 90%;
-  margin: 0 5%;
-  background-color: #ffffff;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.75);
+  p  {
+    margin: 0;
+  }
+  h3 {
+    text-align: center;
+    margin: 5px;
+  }
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__info {
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    width: 90%;
+    margin: 0 5%;
+    background-color: #ffffff;
+    border-top-left-radius: $info-radious;
+    border-top-right-radius: $info-radious;
+    box-shadow: 1px 0 10px lighten(#000000, 40%);
+    transition: .3s;
+  }
+  &__hiddenInfo {
+    padding: 0 10px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
 }
