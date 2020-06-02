@@ -1,4 +1,4 @@
-# Rick and morty with web components  
+# Rick and Morty API with web components  
  
 I'm testing the web components standard through the Rick and Morty API. I also made a webpack template in order to:  
 - Use Typescript.
